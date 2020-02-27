@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/sh
 
 export get_current_task_id=$(~/.local/bin/aws ecs list-tasks --cluster $cluster_name --desired-status RUNNING --family $task_family | jq -r ".taskArns[0]")
 
